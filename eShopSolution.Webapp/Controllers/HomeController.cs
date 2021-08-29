@@ -20,7 +20,10 @@ namespace eShopSolution.Webapp.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var message = new MessageModel();
+            message.Welcome = "hello ban nha";
+            ViewBag.WelcomeString = "hello ban";
+            return View(message);
         }
 
         public IActionResult Privacy()
